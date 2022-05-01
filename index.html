@@ -32,9 +32,53 @@
     <main>
         <!-- ABOUT-SECTION -->
         <section class="section-about">
-
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
+            </div>
         </section>
     </main>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <a href="#" class="popup__close">&times;</a>
+            <div class="popup__form">
+                <form action="#" class="form">
+                    <div class="u-margin-bottom-medium u-center-text">
+                        <h2 class="heading-secondary">Send Queries here</h2>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" id="name" placeholder="Full name" required>
+                        <label for="name" class="form__label">Full name</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" class="form__input" id="email" placeholder="Email address" required>
+                        <label for="email" class="form__label">Email address</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" id="subject" placeholder="Subject" required>
+                        <label for="subject" class="form__label">Subject</label>
+                    </div>
+                    <div class="form__group">
+                        <textarea name="" id="message" cols="20" rows="2" placeholder="Message"
+                            class="form__input"></textarea>
+                    </div>
+                    <div class="form__group u-margin-top-small u-margin-bottom-small">
+                        <button class="btn btn--red">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup__icon">
+        <a href="#popup" class="popup__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                class="bi bi-envelope popup__svg" viewBox="0 0 16 16">
+                <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+            </svg>
+        </a>
+    </div>
 
     <!-- <section class="grid-test">
         <div class="row">
