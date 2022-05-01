@@ -1,0 +1,30 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        font-size: $default-font-size;
+        transition: all .2s;
+
+        // changes for the <button> element
+        cursor: pointer;
+    }
+
+    &--blue {
+        background-color: transparent;
+        color: $color-blue-dark-2;
+        border: 1px solid $color-blue-dark-2;
+
+        &:hover,
+        &:active {
+            background-color: $color-blue-dark-2;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        }
+    }
+}

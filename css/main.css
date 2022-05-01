@@ -1,0 +1,162 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 45rem;
+  font-weight: 600;
+  background-image: url(../imgs/waves.jpg);
+  background-size: cover;
+  background-position: top;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 0.8;
+}
+.heading-primary--sub {
+  display: block;
+  color: #012a4a;
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  position: absolute;
+  top: 42%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-left {
+  margin-left: 2.5rem;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-small {
+  margin-top: 4rem !important;
+}
+
+.u-margin-top-bigger {
+  margin-top: 10rem !important;
+}
+
+.u-bg-plum {
+  background-color: plum !important;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(97, 165, 194, 0.65), rgba(169, 214, 229, 0.65)), url(../imgs/fishing-boat.jpg);
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(6rem + 2 * ((100% - 2 * 6rem) / 3));
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(6rem + 2 * ((100% - 3 * 6rem) / 4));
+}
+.row .col-3-of-4 {
+  width: calc(2 * 6rem + 3 * ((100% - 3 * 6rem) / 4));
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn--blue {
+  background-color: transparent;
+  color: #023646;
+  border: 1px solid #023646;
+}
+.btn--blue:hover, .btn--blue:active {
+  background-color: #023646;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.section-about {
+  padding: 25rem 0;
+}
