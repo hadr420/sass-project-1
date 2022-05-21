@@ -243,7 +243,7 @@ body {
   width: 6.5rem;
   border-radius: 100%;
   background-color: #fff;
-  box-shadow: 0 0 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.15);
 }
 .popup__link:link, .popup__link:visited {
   position: absolute;
@@ -314,6 +314,28 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  position: absolute;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  outline: 1px solid #e10c53;
+  outline-offset: 1.5rem;
+}
+.composition__photo-1 {
+  width: 55%;
+  z-index: 1;
+  top: -2rem;
+  left: 5rem;
+}
+.composition__photo-2 {
+  width: 35%;
+  z-index: 2;
+  top: 16rem;
+  left: 20rem;
 }
 
 .section-about {
