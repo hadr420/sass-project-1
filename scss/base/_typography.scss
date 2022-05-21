@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    // font-family: 'DM Serif Display', serif;
+    // font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     /* font-size: 16px; */
     line-height: 1.7;
@@ -38,9 +38,25 @@ body {
 }
 
 .heading-secondary {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Libre Baskerville', serif;
     font-size: 3rem;
-    font-weight: 100;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: .5rem;
+    letter-spacing: .2rem;
+    color: $color-blue-dark;
+}
+
+.heading-tertiary {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-blue-dark;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
 }

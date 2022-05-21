@@ -33,11 +33,26 @@ body {
 }
 
 .heading-secondary {
-  font-family: "DM Serif Display", serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
+  color: #013a63;
+}
+
+.heading-tertiary {
+  font-family: "Libre Baskerville", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #013a63;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
 }
 
 .u-center-text {
@@ -98,6 +113,14 @@ body {
   background-size: cover;
   background-position: bottom;
   position: relative;
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 8.5rem;
 }
 .header__text-box {
   position: absolute;
@@ -220,7 +243,7 @@ body {
   width: 6.5rem;
   border-radius: 100%;
   background-color: #fff;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4rem rgba(0, 0, 0, 0.2);
 }
 .popup__link:link, .popup__link:visited {
   position: absolute;
@@ -280,5 +303,5 @@ body {
 }
 
 .section-about {
-  padding: 25rem 0;
+  padding: 10rem 0;
 }
