@@ -108,7 +108,7 @@ body {
 }
 
 .header {
-  height: 100vh;
+  height: 95vh;
   background-color: #a9d6e5;
   background-size: cover;
   background-position: bottom;
@@ -196,6 +196,16 @@ body {
 .btn--red:hover, .btn--red:active {
   background-color: #e10c53;
   color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn--white {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn--white:hover, .btn--white:active {
+  background-color: #fff;
+  color: #e10c53;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
@@ -338,6 +348,104 @@ body {
   left: 20rem;
 }
 
+.card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+}
+.card--1, .card--3 {
+  transform: translateY(-20%);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #fff;
+  top: 60%;
+  left: 5%;
+  right: 5%;
+  bottom: 35%;
+  z-index: 3;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in-out;
+}
+.card__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.card__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+}
+.card__heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.card__btn {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  transform: translateY(-200%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.card__paragraph {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover .card__shadow {
+  transform: translateY(0);
+}
+.card:hover .card__paragraph {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.card:hover::before {
+  transform: scaleX(100%);
+}
+.card:hover .card__btn {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
 .section-about {
   padding: 10rem 0;
+}
+
+.section-selling-point {
+  padding: 7rem 0 10rem 0;
+  background-image: linear-gradient(to bottom, #a9d6e5, #fff);
 }
