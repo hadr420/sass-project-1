@@ -1,0 +1,45 @@
+.story {
+    padding: 2rem;
+    background-color: $color-blue-2;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
+    opacity: .85;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02) translateY(-1rem);
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 200;
+        line-height: 3.5rem;
+        text-transform: capitalize;
+        letter-spacing: .5rem;
+
+        &--light {
+            color: $color-blue-dark;
+        }
+
+        &--dark {
+            color: $color-white;
+        }
+    }
+
+    &__photo {
+        width: 10rem;
+        height: 15rem;
+        float: right;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
+    }
+
+    &__image {
+        height: 100%;
+    }
+
+    &--dark {
+        background-color: $color-blue-dark;
+        color: $color-white;
+    }
+}
