@@ -278,7 +278,7 @@ body {
   height: 6.5rem;
   width: 6.5rem;
   border-radius: 100%;
-  color: #e10c53;
+  color: #013a63;
 }
 .popup__svg {
   position: absolute;
@@ -463,7 +463,7 @@ body {
 
 .section-selling-point {
   padding: 7rem 0 10rem 0;
-  background-image: linear-gradient(to bottom, #a9d6e5, #fff);
+  background-image: linear-gradient(#a9d6e5 0%, #a9d6e5 45%, #fff 45%);
 }
 
 .section-story {
