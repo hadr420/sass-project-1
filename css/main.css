@@ -457,45 +457,6 @@ body {
   visibility: visible;
 }
 
-.story {
-  padding: 2rem;
-  background-color: #a9d6e5;
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
-  opacity: 0.85;
-  transition: all 0.3s ease-in-out;
-}
-.story:hover {
-  transform: scale(1.02) translateY(-1rem);
-}
-.story__heading {
-  font-size: 2.5rem;
-  font-weight: 200;
-  line-height: 3.5rem;
-  text-transform: capitalize;
-  letter-spacing: 0.5rem;
-}
-.story__heading--light {
-  color: #013a63;
-}
-.story__heading--dark {
-  color: #fff;
-}
-.story__photo {
-  width: 10rem;
-  height: 15rem;
-  float: right;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
-}
-.story__image {
-  height: 100%;
-}
-.story--dark {
-  background-color: #013a63;
-  color: #fff;
-}
-
 .section-about {
   padding: 10rem 0;
 }
