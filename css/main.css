@@ -1,3 +1,11 @@
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -238,8 +246,8 @@ body {
 }
 .popup__close:link, .popup__close:visited {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 1.5rem;
+  right: 1.5rem;
   font-size: 3rem;
   color: #000;
   text-decoration: none;
@@ -287,7 +295,7 @@ body {
 }
 
 .form__group:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .form__input {
   width: 80%;
@@ -308,7 +316,7 @@ body {
   margin-left: 2rem;
   margin-top: 0.7rem;
   display: block;
-  transform: translate(-1.5rem, -8rem);
+  transform: translate(-1.5rem, -7.5rem);
   transition: all 0.3s;
 }
 .form__input:placeholder-shown + .form__label {
@@ -324,6 +332,9 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0.3;
+  animation-name: fadeOut;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
 }
 .bg-video__content {
   width: 100%;
