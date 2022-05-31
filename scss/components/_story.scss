@@ -1,0 +1,94 @@
+.story-box {
+    height: 30rem;
+    perspective: 150rem;
+
+    &:hover &__content {
+        transform: rotateY(180deg);
+    }
+
+    &__content {
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all .4s ease-in-out;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
+    }
+
+    &__side {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // overflow: hidden;
+        backface-visibility: hidden;
+
+        &--front {
+            background-size: cover;
+            background-blend-mode: screen;
+
+            &--1 {
+                background-image: linear-gradient(to bottom, rgba($color-blue-dark-1, .5), rgba($color-blue-dark-2, .5)),
+                    url(../imgs/man-1.jpg);
+            }
+
+            &--2 {
+                background-image: linear-gradient(to bottom, rgba($color-blue-dark-1, .5), rgba($color-blue-dark-2, .5)),
+                    url(../imgs/woman-1.jpg);
+            }
+
+            &--3 {
+                background-image: linear-gradient(to bottom, rgba($color-blue-dark-1, .5), rgba($color-blue-dark-2, .5)),
+                    url(../imgs/woman-2.jpg);
+            }
+
+            &--4 {
+                background-image: linear-gradient(to bottom, rgba($color-blue-dark-1, .5), rgba($color-blue-dark-2, .5)),
+                    url(../imgs/man-2.jpg);
+            }
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            background-image: radial-gradient(rgba($color-blue-1, 1), rgba($color-blue, 1));
+            position: relative;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 75%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__text {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        right: 2rem;
+    }
+
+    &__paragraph {
+        font-size: 2rem;
+        font-weight: 200;
+        text-align: center;
+        color: $color-white;
+    }
+
+    &__heading {
+        color: $color-white;
+
+        &--main {
+            font-size: 4rem;
+            font-weight: 100;
+        }
+
+        &--sub {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: .5rem;
+        }
+    }
+}

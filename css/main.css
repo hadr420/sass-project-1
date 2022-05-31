@@ -457,6 +457,81 @@ body {
   visibility: visible;
 }
 
+.story-box {
+  height: 30rem;
+  perspective: 150rem;
+}
+.story-box:hover .story-box__content {
+  transform: rotateY(180deg);
+}
+.story-box__content {
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+}
+.story-box__side {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+}
+.story-box__side--front {
+  background-size: cover;
+  background-blend-mode: screen;
+}
+.story-box__side--front--1 {
+  background-image: linear-gradient(to bottom, rgba(1, 42, 74, 0.5), rgba(2, 54, 70, 0.5)), url(../imgs/man-1.jpg);
+}
+.story-box__side--front--2 {
+  background-image: linear-gradient(to bottom, rgba(1, 42, 74, 0.5), rgba(2, 54, 70, 0.5)), url(../imgs/woman-1.jpg);
+}
+.story-box__side--front--3 {
+  background-image: linear-gradient(to bottom, rgba(1, 42, 74, 0.5), rgba(2, 54, 70, 0.5)), url(../imgs/woman-2.jpg);
+}
+.story-box__side--front--4 {
+  background-image: linear-gradient(to bottom, rgba(1, 42, 74, 0.5), rgba(2, 54, 70, 0.5)), url(../imgs/man-2.jpg);
+}
+.story-box__side--back {
+  transform: rotateY(180deg);
+  background-image: radial-gradient(#61a5c2, #89c2d9);
+  position: relative;
+}
+.story-box__title {
+  position: absolute;
+  top: 75%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+.story-box__text {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+}
+.story-box__paragraph {
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+  color: #fff;
+}
+.story-box__heading {
+  color: #fff;
+}
+.story-box__heading--main {
+  font-size: 4rem;
+  font-weight: 100;
+}
+.story-box__heading--sub {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+}
+
 .section-about {
   padding: 10rem 0;
 }
@@ -468,4 +543,6 @@ body {
 
 .section-story {
   padding: 10rem 0;
+  background-image: linear-gradient(to bottom, rgba(227, 248, 255, 0.5), rgba(137, 194, 217, 0.5)), url(../imgs/shore.jpg);
+  background-size: cover;
 }
