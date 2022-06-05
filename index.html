@@ -14,6 +14,34 @@
 
 <body>
 
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation__button">
+            <div class="navigation__icon">
+                <div class="navigation__iconface navigation__iconface--front">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-compass navigation__svg" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                    </svg>
+                </div>
+                <div class="navigation__iconface navigation__iconface--back">&nbsp;</div>
+            </div>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">boats</li>
+                <li class="navigation__item">seas</li>
+                <li class="navigation__item">beaches</li>
+                <li class="navigation__item">contact</li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- THE-HEADER -->
     <header class="header">
         <div class="bg-video">
@@ -135,7 +163,7 @@
                                     <h5 class="story-box__heading story-box__heading--sub">Professional Chef</h5>
                                 </div>
                             </div>
-                            <div class="story-box__side story-box__side--back">
+                            <div class="story-box__side story-box__side--back story-box__side--back--1">
                                 <div class="story-box__text">
                                     <p class="story-box__paragraph">Lorem ipsum dolor sit amet
                                         consectetur
@@ -159,7 +187,7 @@
                                     <h5 class="story-box__heading story-box__heading--sub">Mother of two</h5>
                                 </div>
                             </div>
-                            <div class="story-box__side story-box__side--back">
+                            <div class="story-box__side story-box__side--back story-box__side--back--2">
                                 <div class="story-box__text">
                                     <p class="story-box__paragraph">Lorem ipsum dolor sit amet
                                         consectetur
@@ -185,7 +213,7 @@
                                     <h5 class="story-box__heading story-box__heading--sub">Sea food lover</h5>
                                 </div>
                             </div>
-                            <div class="story-box__side story-box__side--back">
+                            <div class="story-box__side story-box__side--back story-box__side--back--3">
                                 <div class="story-box__text">
                                     <p class="story-box__paragraph">Lorem ipsum dolor sit amet
                                         consectetur
@@ -209,7 +237,7 @@
                                     <h5 class="story-box__heading story-box__heading--sub">Restourant owner</h5>
                                 </div>
                             </div>
-                            <div class="story-box__side story-box__side--back">
+                            <div class="story-box__side story-box__side--back story-box__side--back--4">
                                 <div class="story-box__text">
                                     <p class="story-box__paragraph">Lorem ipsum dolor sit amet
                                         consectetur
@@ -224,6 +252,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="section-products">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">Our best sellers</h2>
             </div>
         </section>
     </main>

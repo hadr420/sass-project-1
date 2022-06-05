@@ -488,21 +488,44 @@ body {
   background-blend-mode: screen;
 }
 .story-box__side--front--1 {
-  background-image: linear-gradient(to bottom, rgba(1, 42, 74, 0.5), rgba(2, 54, 70, 0.5)), url(../imgs/man-1.jpg);
+  background-image: url(../imgs/man-1.jpg);
 }
 .story-box__side--front--2 {
-  background-image: linear-gradient(to bottom, rgba(1, 42, 74, 0.5), rgba(2, 54, 70, 0.5)), url(../imgs/woman-1.jpg);
+  background-image: url(../imgs/woman-1.jpg);
 }
 .story-box__side--front--3 {
-  background-image: linear-gradient(to bottom, rgba(1, 42, 74, 0.5), rgba(2, 54, 70, 0.5)), url(../imgs/woman-2.jpg);
+  background-image: url(../imgs/woman-2.jpg);
+  background-position: bottom;
 }
 .story-box__side--front--4 {
-  background-image: linear-gradient(to bottom, rgba(1, 42, 74, 0.5), rgba(2, 54, 70, 0.5)), url(../imgs/man-2.jpg);
+  background-image: url(../imgs/man-2.jpg);
 }
 .story-box__side--back {
   transform: rotateY(180deg);
-  background-image: radial-gradient(#61a5c2, #89c2d9);
+  overflow: hidden;
   position: relative;
+}
+.story-box__side--back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  filter: blur(5px);
+}
+.story-box__side--back--1::before {
+  background-image: url(../imgs/man-1.jpg);
+}
+.story-box__side--back--2::before {
+  background-image: url(../imgs/woman-1.jpg);
+}
+.story-box__side--back--3::before {
+  background-image: url(../imgs/woman-2.jpg);
+}
+.story-box__side--back--4::before {
+  background-image: url(../imgs/man-2.jpg);
 }
 .story-box__title {
   position: absolute;
@@ -535,6 +558,135 @@ body {
   letter-spacing: 0.5rem;
 }
 
+.navigation__checkbox {
+  display: none;
+}
+.navigation__button {
+  height: 6.5rem;
+  width: 6.5rem;
+  position: fixed;
+  top: 3.5rem;
+  right: 3.5rem;
+  border-radius: 50%;
+  z-index: 200;
+  perspective: 150rem;
+  cursor: pointer;
+}
+.navigation__icon {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 1s;
+  transform-style: preserve-3d;
+  border-radius: 100%;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
+}
+.navigation__svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 50%;
+  color: #013a63;
+}
+.navigation__iconface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+}
+.navigation__iconface--front {
+  background-color: white;
+}
+.navigation__iconface--back {
+  background-color: #e10c53;
+  transform: rotateY(180deg);
+}
+.navigation__iconface--back::before {
+  content: "";
+  height: 2px;
+  width: 3rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.navigation__iconface--back::after {
+  content: "";
+  height: 2px;
+  width: 3rem;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.navigation__background {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: rgba(137, 194, 217, 0.9);
+  transform: scale(0);
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  z-index: 100;
+  transition: all 0.5s ease-in-out;
+}
+.navigation__nav {
+  height: 100vh;
+  width: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  z-index: 150;
+}
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.navigation__item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  color: black;
+  text-transform: uppercase;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.navigation__item:hover {
+  background-color: white;
+  color: #e10c53;
+  transform: translateY(-1rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(50);
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+  transform: translateX(0);
+}
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+  transform: rotateY(540deg);
+}
+
 .section-about {
   padding: 10rem 0;
 }
@@ -546,6 +698,9 @@ body {
 
 .section-story {
   padding: 10rem 0;
-  background-image: linear-gradient(to bottom, rgba(227, 248, 255, 0.5), rgba(137, 194, 217, 0.5)), url(../imgs/shore.jpg);
-  background-size: cover;
+  background-color: #e3f8ff;
+}
+
+.section-products {
+  padding: 10rem 0;
 }

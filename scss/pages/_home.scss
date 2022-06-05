@@ -9,6 +9,9 @@
 
 .section-story {
     padding: 10rem 0;
-    background-image: linear-gradient(to bottom, rgba($color-blue-2, .5), rgba($color-blue, .5)), url(../imgs/shore.jpg);
-    background-size: cover;
+    background-color: $color-blue-2;
+}
+
+.section-products {
+    padding: 10rem 0;
 }

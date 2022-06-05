@@ -1,0 +1,175 @@
+.navigation {
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        height: 6.5rem;
+        width: 6.5rem;
+        // background-color: palevioletred;
+        // background-color: #fff;
+        position: fixed;
+        top: 3.5rem;
+        right: 3.5rem;
+        border-radius: 50%;
+        z-index: 200;
+        perspective: 150rem;
+        cursor: pointer;
+    }
+
+    &__icon {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        // background-color: #00ffaa;
+        transition: all 1s;
+        transform-style: preserve-3d;
+        border-radius: 100%;
+        box-shadow: 0 0 3rem rgba($color-black, .25);
+    }
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50%;
+        width: 50%;
+        color: $color-blue-dark;
+    }
+
+    &__iconface {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 50%;
+        // transition: all .3s ease-in-out;
+
+        &--front {
+            // background-color: blue;
+            background-color: white;
+
+            // &::before {
+            //     content: "";
+            //     height: 2px;
+            //     width: 3rem;
+            //     background-color: #000;
+            //     position: absolute;
+            //     top: 40%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            // }
+
+            // &::after {
+            //     content: "";
+            //     height: 2px;
+            //     width: 3rem;
+            //     background-color: #000;
+            //     position: absolute;
+            //     top: 60%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            // }
+        }
+
+        &--back {
+            background-color: $color-red;
+            transform: rotateY(180deg);
+
+            &::before {
+                content: "";
+                height: 2px;
+                width: 3rem;
+                background-color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                height: 2px;
+                width: 3rem;
+                background-color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+
+    &__background {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        background-color: rgba($color-blue, .9);
+        transform: scale(0);
+        position: fixed;
+        top: 4rem;
+        right: 4rem;
+        z-index: 100;
+        transition: all .5s ease-in-out;
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 150;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        z-index: 150;
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        font-weight: 400;
+        padding: 1rem 2rem;
+        color: black;
+        text-transform: uppercase;
+        // background-color: cadetblue;
+        margin: 1rem;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            background-color: white;
+            color: $color-red;
+            transform: translateY(-1rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        }
+    }
+
+    &__checkbox:checked~&__background {
+        transform: scale(50);
+    }
+
+    &__checkbox:checked~&__nav {
+        opacity: 1;
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    &__checkbox:checked~&__button &__icon {
+        transform: rotateY(540deg);
+    }
+}
