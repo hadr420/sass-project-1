@@ -42,6 +42,19 @@
         }
     }
 
+    &--red-dark {
+        background-color: transparent;
+        color: $color-white;
+        border: 1px solid $color-red;
+
+        &:hover,
+        &:active {
+            background-color: $color-red;
+            color: $color-blue-dark-2;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        }
+    }
+
     &--white {
         background-color: transparent;
         color: $color-white;
