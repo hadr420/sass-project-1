@@ -1,6 +1,13 @@
 .product-box {
     height: 30rem;
     position: relative;
+    transition: all .2s ease-in;
+
+    &:hover {
+        transform: scale(1.05) translateY(-1rem);
+        cursor: pointer;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .25);
+    }
 
     &__price-box {
         position: absolute;

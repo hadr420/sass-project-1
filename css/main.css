@@ -572,6 +572,12 @@ body {
 .product-box {
   height: 30rem;
   position: relative;
+  transition: all 0.2s ease-in;
+}
+.product-box:hover {
+  transform: scale(1.05) translateY(-1rem);
+  cursor: pointer;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
 }
 .product-box__price-box {
   position: absolute;
