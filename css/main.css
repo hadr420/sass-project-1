@@ -134,6 +134,7 @@ body {
   font-weight: 300;
   color: #e10c53;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 .header__text-box {
   position: absolute;
