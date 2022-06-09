@@ -1,0 +1,26 @@
+.feature-box {
+    background-color: $color-blue-2;
+    padding: 2rem;
+    text-align: center;
+    opacity: .75;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.05);
+    }
+
+    &__heading {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color-blue-dark-2;
+        letter-spacing: 0;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+
+    &__icon {
+        font-size: 5rem;
+        color: $color-red;
+    }
+}

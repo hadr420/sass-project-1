@@ -797,6 +797,29 @@ body {
   transform: rotateY(540deg);
 }
 
+.feature-box {
+  background-color: #e3f8ff;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0.75;
+  transition: all 0.2s ease-in-out;
+}
+.feature-box:hover {
+  transform: translateY(-1rem) scale(1.05);
+}
+.feature-box__heading {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #023646;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.feature-box__icon {
+  font-size: 5rem;
+  color: #e10c53;
+}
+
 .section-about {
   padding: 10rem 0;
 }
@@ -814,4 +837,10 @@ body {
 .section-products {
   padding: 10rem 0;
   background-color: #023646;
+}
+
+.section-features {
+  padding: 10rem 0;
+  background-image: url(../imgs/fish-container.jpg);
+  background-size: cover;
 }
