@@ -98,6 +98,11 @@
         padding: .3rem 1.5rem;
         text-transform: uppercase;
 
+        @include respond(tab-port) {
+            padding: 1.5rem 3rem;
+            font-size: 2rem;
+        }
+
         &--1 {
             background-color: $color-tan;
         }

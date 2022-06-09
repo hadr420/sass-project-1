@@ -172,6 +172,14 @@
 
     &__checkbox:checked~&__background {
         transform: scale(50);
+
+        @include respond(tab-port) {
+            transform: scale(45);
+        }
+
+        @include respond(big-desktop) {
+            transform: scale(60);
+        }
     }
 
     &__checkbox:checked~&__nav {

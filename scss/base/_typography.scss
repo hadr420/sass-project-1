@@ -41,6 +41,17 @@ body {
     text-transform: uppercase;
     letter-spacing: .4rem;
     color: $color-blue-dark;
+
+    @include respond(tab-port) {
+        letter-spacing: .2;
+    }
+
+    @include respond(phone) {
+        letter-spacing: 0;
+        font-size: 3rem;
+        font-weight: 500;
+        margin: 0 1rem;
+    }
 }
 
 .heading-tertiary {

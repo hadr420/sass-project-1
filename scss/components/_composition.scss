@@ -1,5 +1,11 @@
 .composition {
     position: relative;
+    height: 30rem;
+
+    @include respond(tab-port) {
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+    }
 
     &__photo {
         position: absolute;
@@ -11,14 +17,36 @@
             width: 55%;
             z-index: 1;
             top: -2rem;
-            left: 5rem;
+            left: 7.5rem;
+
+            @include respond(tab-port) {
+                left: 0;
+            }
+
+            @include respond(phone) {
+                width: 65%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
 
         &-2 {
             width: 35%;
             z-index: 2;
             top: 16rem;
-            left: 20rem;
+            left: 22.5rem;
+
+            @include respond(tab-port) {
+                left: 15rem;
+            }
+
+            @include respond(phone) {
+                width: 45%;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 }

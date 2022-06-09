@@ -1,5 +1,9 @@
 .section-about {
-    padding: 10rem 0;
+    padding: 10rem 0 15rem 0;
+
+    @include respond(phone) {
+        text-align: center;
+    }
 }
 
 .section-selling-point {

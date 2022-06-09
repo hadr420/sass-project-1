@@ -5,6 +5,10 @@
     opacity: .75;
     transition: all .2s ease-in-out;
 
+    @include respond(tab-port) {
+        padding-bottom: 3rem;
+    }
+
     &:hover {
         transform: translateY(-1rem) scale(1.05);
     }

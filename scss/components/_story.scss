@@ -1,8 +1,53 @@
 .story-box {
+    position: relative;
     height: 30rem;
     perspective: 150rem;
 
+    &--1,
+    &--3 {
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &:last-child {
+        @include respond(tab-port) {
+            margin-bottom: 7rem;
+        }
+    }
+
     &:hover &__content {
+        transform: rotateY(180deg);
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        text-transform: uppercase;
+        padding: .5rem 2rem;
+        display: inline-block;
+        border-radius: 10rem;
+        font-size: $default-font-size;
+        letter-spacing: .3rem;
+        background-color: $color-white;
+        color: $color-black;
+        position: absolute;
+        top: 112%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .25);
+        cursor: pointer;
+        visibility: hidden;
+
+        @include respond(tab-port) {
+            visibility: visible;
+        }
+    }
+
+    &__checkbox:checked~&__content {
         transform: rotateY(180deg);
     }
 
@@ -27,6 +72,10 @@
         &--front {
             background-size: cover;
             background-blend-mode: screen;
+
+            @include respond(phone-small) {
+                background-position: center;
+            }
 
             &--1 {
                 background-image: url(../imgs/man-1.jpg);
@@ -94,6 +143,13 @@
         top: 75%;
         left: 30%;
         transform: translate(-50%, -50%);
+
+        @include respond(phone-small) {
+            width: 100%;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+        }
     }
 
     &__text {
@@ -108,6 +164,14 @@
         font-weight: 200;
         text-align: center;
         color: $color-white;
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
+
+        @include respond(phone-small) {
+            font-size: 1.5rem;
+        }
     }
 
     &__heading {
@@ -122,6 +186,10 @@
             font-size: 1.5rem;
             font-weight: 300;
             letter-spacing: .5rem;
+
+            @include respond(phone-small) {
+                font-size: 2rem;
+            }
         }
     }
 }
