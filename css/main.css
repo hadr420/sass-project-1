@@ -180,6 +180,65 @@ body {
   width: calc((100% - 4 * 6rem) / 5);
 }
 
+.footer {
+  padding: 10rem 0;
+  background-color: #023646;
+}
+.footer [class^=col-] {
+  padding-left: 5rem;
+}
+.footer__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #89c2d9;
+}
+.footer__list {
+  list-style: none;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 200;
+}
+.footer__list-item {
+  cursor: pointer;
+}
+.footer__link, .footer__link:link, .footer__link:visited {
+  text-decoration: none;
+  transition: all 0.2s;
+  color: #fff;
+}
+.footer__link:hover {
+  color: #89c2d9;
+}
+.footer__socials {
+  text-align: center;
+}
+.footer__icon {
+  color: #89c2d9;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.footer__icon:hover {
+  color: #fff;
+}
+.footer__icon:not(:last-child) {
+  margin-right: 2rem;
+}
+.footer__logo-box {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.footer__logo {
+  font-size: 10rem;
+  font-weight: 300;
+  color: #e10c53;
+  transform: rotate(180deg);
+  line-height: 0.8;
+  cursor: pointer;
+}
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
