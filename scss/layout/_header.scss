@@ -9,11 +9,14 @@
         position: absolute;
         top: 5rem;
         left: 5rem;
-        transform: rotate(-42deg);
     }
 
     &__logo {
-        height: 5rem;
+        line-height: .8;
+        font-size: 10rem;
+        font-weight: 300;
+        color: $color-red;
+        transform: rotate(180deg);
     }
 
     &__text-box {
