@@ -1,8 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    // font-family: 'Libre Baskerville', serif;
     font-weight: 400;
-    /* font-size: 16px; */
     line-height: 1.7;
 }
 
@@ -38,16 +36,14 @@ body {
 }
 
 .heading-secondary {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 3.5rem;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    letter-spacing: .4rem;
     color: $color-blue-dark;
 }
 
 .heading-tertiary {
-    font-family: 'Libre Baskerville', serif;
     font-size: 2rem;
     font-weight: 600;
     color: $color-blue-dark;
